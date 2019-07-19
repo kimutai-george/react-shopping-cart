@@ -1,26 +1,44 @@
+    
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Cart from './containers/Cart';
+import ProductList from './containers/ProductList';
+import Nav from './components/Nav'
+import {BrowserRouter as Router} from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+const App = () => {
+    return (
+        <Router>
+        <div className="container">
+            <Nav/>
+            <div className="row">
+                <div className="col-md-12">
+                    <h1>Computer Accessories Shop</h1>
+                </div>
+            </div>
+            <div className="row">
+           
+                <div className="col-md-8">
+                    <ProductList />
+                </div>
+                <div className="col-md-4">
+                    <Cart />
+                </div>
+            </div>
+
+            <footer>
+                <small>
+                   Computer Shop &copy; 
+                  
+                    
+                        
+                     
+                </small>
+            </footer>
+        </div>
+        </Router>
+    );
 }
 
 export default App;
